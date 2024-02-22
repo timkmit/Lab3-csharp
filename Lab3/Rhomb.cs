@@ -24,11 +24,21 @@ namespace Lab3
 
         public override void Draw(Graphics gr)
         {
-            gr.DrawRectangle(new Pen(Color), Position.X, Position.Y, (int)Side, (int)Height);
+            // Четыре вершины ромба
+            Point[] points = new Point[]
+            {
+            new Point(Position.X + (int)Height / 2, Position.Y), // Верх
+            new Point(Position.X + (int)Height, Position.Y + (int)Height / 2), // Право
+            new Point(Position.X + (int)Height / 2, Position.Y + (int)Height), // Низ
+            new Point(Position.X, Position.Y + (int)Height / 2) // Лево
+            };
 
-            // Assuming you want to display the center coordinates as a string
-            string centerString = $"Center: ({GetCenter().X}, {GetCenter().Y})";
-            gr.DrawString(centerString, new Font("Arial", 9), Brushes.Black, GetCenter());
+            // Рисуем ромб
+            gr.DrawPolygon(new Pen(Color), points);
+
+            // Рисуем центр ромба
+            Point center = GetCenter();
+            gr.DrawString($"({center.X}, {center.Y})", new Font("Arial", 9), Brushes.Black, center);
         }
     }
 }

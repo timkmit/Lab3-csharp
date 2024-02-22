@@ -24,7 +24,7 @@ namespace Lab3
             new Circle()
             {
                 Color = Color.Red,
-                Position = new Point(70, 70),
+                Position = new Point(90, 90),
                 Name = "Прямоугольник Б",
                 Radius = 45,
                 
@@ -36,6 +36,32 @@ namespace Lab3
                 Name = "Прямоугольник Б",
                 Side = 50,
                 Radius = 54
+            },
+            new Rhomb()
+            {
+                Color = Color.Red,
+                Position = new Point(220, 220),
+                Name = "Ромб",
+                Side = 45,
+                Height = 54
+            },
+            new Trapezoid()
+            {
+                Color = Color.Green,
+                Position = new Point(290, 290),
+                Name = "Ромб",
+                TopBase = 75,
+                BottomBase = 85,
+                Height = 20
+            },
+            new Triangle()
+            {
+                Color = Color.Green,
+                Position = new Point(360, 360),
+                Name = "Ромб",
+                Base = 75,
+                Height = 50
+
             }
         };
 

@@ -30,5 +30,6 @@ namespace Lab3
             string centerString = $"Center: ({GetCenter().X}, {GetCenter().Y})";
             gr.DrawString(centerString, new Font("Arial", 9), Brushes.Black, GetCenter());
         }
+
     }
 }
